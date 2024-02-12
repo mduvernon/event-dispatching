@@ -1,7 +1,7 @@
 # event-dispatching
 
 Allows to register subscribers and dispatch events across the application including Inversify.
-This package is an update of the `event-dispatch` module from here
+This package is an update of the [`pleerock/event-dispatch`](https://github.com/pleerock/event-dispatch) module
 
 ## Installation
 
