@@ -1,0 +1,71 @@
+{
+  "name": "event-dispatcher",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Dispatching and listening for application events in Typescript",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "typings": "./dist/index.d.ts",
+  "files": [
+    "./dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=14.18.1"
+  },
+  "homepage": "https://github.com/mduvernon/event-dispatcher",
+  "url": "https://github.com/mduvernon/event-dispatcher",
+  "email": "manuel.duvernon@gmail.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mduvernon/event-dispatcher.git"
+  },
+  "author": "mduvernon <manuel.duvernon@gmail.com>",
+  "readmeFilename": "README.md",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/mduvernon/event-dispatcher/issues"
+  },
+  "tags": [
+    "typescript",
+    "event-dispatcher",
+    "inversify"
+  ],
+  "scripts": {
+    "build": "tsc --project tsconfig.bundle.json --newLine LF",
+    "dev": "tsc -w --project tsconfig.bundle.json --newLine LF",
+    "test": "jest --maxWorkers=4",
+    "test:unit:watch": "jest --maxWorkers=4 --watch",
+    "test:unit:file": "jest --no-cache --maxWorkers=4",
+    "test:unit:file:watch": "jest --no-cache --maxWorkers=4 --watch",
+    "prettify": "prettier --write ./src"
+  },
+  "keywords": [
+    "typescript",
+    "event-dispatcher",
+    "event-subscriber",
+    "inversify"
+  ],
+  "dependencies": {
+    "fs": "0.0.2",
+    "path": "0.12.7",
+    "inversify": "6.0.2",
+    "rxjs": "7.8.1",
+    "reflect-metadata": "0.1.13"
+  },
+  "devDependencies": {
+    "@types/node": "20.6.3",
+    "awesome-typescript-loader": "5.2.1",
+    "prettier": "1.15.2",
+    "rimraf": "4.1.2",
+    "ts-node": "10.7.0",
+    "tslint": "5.11.0",
+    "tslint-config-prettier": "1.16.0",
+    "tslint-loader": "3.5.4",
+    "tslint-microsoft-contrib": "5.2.1",
+    "typescript": "5.2.2",
+    "tslib": "^2.5.0"
+  }
+}

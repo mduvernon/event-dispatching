@@ -1,0 +1,47 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "target": "es6",
+        "lib": [
+            "ESNext",
+            "es5",
+            "es6",
+            "dom"
+        ],
+        "declaration": true,
+        "sourceMap": true,
+        "rootDir": "./src",
+        "outDir": "./dist",
+        "noImplicitAny": true,
+        "importHelpers": true,
+        "strictPropertyInitialization": false,
+        "alwaysStrict": false,
+        "esModuleInterop": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "noImplicitOverride": false,
+        "useDefineForClassFields": false,
+        "composite": true,
+        "baseUrl": ".",
+        "types": [
+            "reflect-metadata",
+            "node"
+        ]
+    },
+    "include": [
+        "src/**/*.ts",
+        "tests/**/*.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "types",
+        "**/*.spec.ts",
+        "**/*.test.js",
+        "**/*.test.ts",
+        "**/__fixtures__/**/*.*",
+        "**/__mocks__/**/*.*"
+    ]
+}
