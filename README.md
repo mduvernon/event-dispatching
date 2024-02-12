@@ -1,12 +1,13 @@
-# event-dispatcher
+# event-dispatching
 
 Allows to register subscribers and dispatch events across the application including Inversify.
+This package is an update of the `event-dispatch` module from here
 
 ## Installation
 
 1. Install module:
 
-   `npm install event-dispatcher --save`
+   `npm install event-dispatching --save`
 
 2. Use [typings](https://github.com/typings/typings) to install all required definition dependencies.
 
@@ -24,7 +25,7 @@ Allows to register subscribers and dispatch events across the application includ
 Simply create a class and put annotations on its methods:
 
 ```typescript
-import { EventSubscriber, On } from "event-dispatcher";
+import { EventSubscriber, On } from "event-dispatching";
 
 @EventSubscriber()
 export class UserEventSubscriber {
@@ -43,7 +44,7 @@ export class UserEventSubscriber {
 Then use EventDispatcher class to dispatch events:
 
 ```typescript
-import { EventDispatcher } from "event-dispatcher";
+import { EventDispatcher } from "event-dispatching";
 
 // note that all your subscribers must be imported somewhere in the app, so they are getting registered
 // on node you can also require the whole directory using [require all](https://www.npmjs.com/package/require-all) package
@@ -57,7 +58,7 @@ eventDispatcher.dispatch("onStatusUpdate", "hello world");
 
 ## Samples
 
-Take a look on samples in [./sample](https://github.com/pleerock/event-dispatcher/tree/master/sample) for more
+Take a look on samples in [./sample](https://github.com/mduvernon/event-dispatching/tree/master/sample) for more
 examples of usages.
 
 ## Todos

@@ -1,6 +1,5 @@
 {
-  "name": "event-dispatcher",
-  "private": true,
+  "name": "event-dispatching",
   "version": "0.0.1",
   "description": "Dispatching and listening for application events in Typescript",
   "main": "./dist/index.js",
@@ -20,10 +19,9 @@
   "email": "manuel.duvernon@gmail.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mduvernon/event-dispatcher.git"
+    "url": "git+https://github.com/mduvernon/event-dispatcher.git"
   },
   "author": "mduvernon <manuel.duvernon@gmail.com>",
-  "readmeFilename": "README.md",
   "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/mduvernon/event-dispatcher/issues"
