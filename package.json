@@ -1,6 +1,6 @@
 {
   "name": "event-dispatching",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Dispatching and listening for application events in Typescript",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -14,21 +14,23 @@
   "engines": {
     "node": ">=14.18.1"
   },
-  "homepage": "https://github.com/mduvernon/event-dispatcher",
-  "url": "https://github.com/mduvernon/event-dispatcher",
+  "homepage": "https://github.com/mduvernon/event-dispatching",
+  "url": "https://github.com/mduvernon/event-dispatching",
   "email": "manuel.duvernon@gmail.com",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mduvernon/event-dispatcher.git"
+    "url": "git+https://github.com/mduvernon/event-dispatching.git"
   },
   "author": "mduvernon <manuel.duvernon@gmail.com>",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/mduvernon/event-dispatcher/issues"
+    "url": "https://github.com/mduvernon/event-dispatching/issues"
   },
   "tags": [
     "typescript",
     "event-dispatcher",
+    "event-dispatching",
+    "event-handler",
     "inversify"
   ],
   "scripts": {
@@ -43,7 +45,9 @@
   "keywords": [
     "typescript",
     "event-dispatcher",
+    "event-dispatching",
     "event-subscriber",
+    "event-handler",
     "inversify"
   ],
   "dependencies": {
