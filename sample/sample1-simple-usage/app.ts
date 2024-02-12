@@ -1,5 +1,11 @@
+import { Container } from 'inversify';
 import "es6-shim";
-import {EventDispatcher} from "../../src/index";
+import eventDispatching from "../../src/index";
+
+const container = new Container();
+
+
+
 
 interface User {
     name: string;

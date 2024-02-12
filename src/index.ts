@@ -20,11 +20,11 @@ export * from './Service'
  * @param {{container: Container}} app The App {container: Container}
  * @returns {EventDispatcherModule}
  */
-export default async function bootstrap(app: { container: Container }): Promise<EventDispatcherModule> {
-    return await new EventDispatcherModule().bootstrap(app)
+export default function bootstrap(app: { container: Container }): EventDispatcherModule {
+    return new EventDispatcherModule().bootstrap(app)
 }
 
 /**
- * Import in this way () => await module.bootstrap(<{container:Container}>)
+ * Import in this way module.bootstrap(<{container:Container}>)
  */
 export const module = { bootstrap }

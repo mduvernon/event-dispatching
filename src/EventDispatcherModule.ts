@@ -1,4 +1,4 @@
-import { AsyncContainerModule, Container } from 'inversify';
+import { ContainerModule, Container } from 'inversify';
 
 import { TYPES } from './Resources/Types';
 
@@ -20,11 +20,11 @@ class EventDispatcherModule {
      *
      * @private
      */
-    public async bootstrap(app: { container: Container }): Promise<this> {
+    public bootstrap(app: { container: Container }): this {
 
         setContainer(app.container)
 
-        const bindings = new AsyncContainerModule(async (bind) => {
+        const bindings = new ContainerModule((bind) => {
             // Registry declarations
             bind<MetadataRegistry>(TYPES.MetadataRegistry)
                 .to(MetadataRegistry)
@@ -35,9 +35,9 @@ class EventDispatcherModule {
                 .to(EventDispatcher);
         });
 
-        await app.container.loadAsync(bindings);
+        app.container.load(bindings);
 
-        await this._handleInitMetadataRegistry(app);
+        this._handleInitMetadataRegistry(app);
 
         return this;
     }
@@ -46,11 +46,11 @@ class EventDispatcherModule {
      * On Pre Init
      *
      * @param {{container: Container}} app
-     * @returns {Promise<this>}
+     * @returns {this}
      */
-    public async onPreInit(app: { container: Container }): Promise<this> {
+    public onPreInit(app: { container: Container }): this {
 
-        await this._handleInitMetadataRegistry(app);
+        this._handleInitMetadataRegistry(app);
 
         return this;
     }
@@ -59,9 +59,9 @@ class EventDispatcherModule {
      * Handle Init Metadata Registry
      *
      * @param {{container: Container}} app
-     * @returns {Promise<this>}
+     * @returns {this}
      */
-    private async _handleInitMetadataRegistry(app: { container: Container }) {
+    private _handleInitMetadataRegistry(app: { container: Container }): this {
         // Init MetadataRegistry
         const metadataRegistry: MetadataRegistry = app.container.get<MetadataRegistry>(TYPES.MetadataRegistry);
 
