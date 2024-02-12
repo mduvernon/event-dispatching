@@ -1,6 +1,7 @@
 # event-dispatching
 
-Allows to register subscribers and dispatch events across the application including Inversify.
+Allows to register subscribers and dispatch events across the application including the dependency injector Inversify.
+
 This package is an update of the [`pleerock/event-dispatch`](https://github.com/pleerock/event-dispatch) module
 
 ## Installation
@@ -63,5 +64,7 @@ examples of usages.
 
 ## Todos
 
+- Make more samples
+- Make it more general with ioc adapter to include any kind of DI
 - cover with tests
 - more documentation

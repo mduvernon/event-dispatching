@@ -1,11 +1,12 @@
 import { Container } from 'inversify';
 import "es6-shim";
-import eventDispatching from "../../src/index";
+import eventDispatching, { TYPES, EventDispatcher } from "../../src/index";
 
 const container = new Container();
 
+eventDispatching({ container });
 
-
+const eventDispatcher = container.get<EventDispatcher>(TYPES.EventDispatcher);
 
 interface User {
     name: string;
@@ -14,7 +15,6 @@ interface User {
 
 let johny: User = { name: "Johny", age: 25 };
 
-let eventDispatcher = new EventDispatcher();
 eventDispatcher.on("user_created", (user: User) => {
     console.log("User " + user.name + " has been created!");
 });
