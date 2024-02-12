@@ -16,13 +16,11 @@ tslib_1.__exportStar(require("./Service"), exports);
  * @returns {EventDispatcherModule}
  */
 function bootstrap(app) {
-    return tslib_1.__awaiter(this, void 0, void 0, function* () {
-        return yield new EventDispatcherModule_1.EventDispatcherModule().bootstrap(app);
-    });
+    return new EventDispatcherModule_1.EventDispatcherModule().bootstrap(app);
 }
 exports.default = bootstrap;
 /**
- * Import in this way () => await module.bootstrap(<{container:Container}>)
+ * Import in this way module.bootstrap(<{container:Container}>)
  */
 exports.module = { bootstrap };
 //# sourceMappingURL=index.js.map

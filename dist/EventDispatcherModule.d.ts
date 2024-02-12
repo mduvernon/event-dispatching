@@ -10,21 +10,21 @@ declare class EventDispatcherModule {
      */
     bootstrap(app: {
         container: Container;
-    }): Promise<this>;
+    }): this;
     /**
      * On Pre Init
      *
      * @param {{container: Container}} app
-     * @returns {Promise<this>}
+     * @returns {this}
      */
     onPreInit(app: {
         container: Container;
-    }): Promise<this>;
+    }): this;
     /**
      * Handle Init Metadata Registry
      *
      * @param {{container: Container}} app
-     * @returns {Promise<this>}
+     * @returns {this}
      */
     private _handleInitMetadataRegistry;
 }

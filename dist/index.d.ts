@@ -14,9 +14,9 @@ export * from './Service';
  */
 export default function bootstrap(app: {
     container: Container;
-}): Promise<EventDispatcherModule>;
+}): EventDispatcherModule;
 /**
- * Import in this way () => await module.bootstrap(<{container:Container}>)
+ * Import in this way module.bootstrap(<{container:Container}>)
  */
 export declare const module: {
     bootstrap: typeof bootstrap;
