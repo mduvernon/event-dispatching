@@ -1,9 +1,9 @@
-import { injectable, inject } from 'inversify';
+import { injectable, inject } from "inversify";
 
-import { TYPES } from '../Resources/Types';
+import { TYPES } from "../Resources/Types";
 
-import { MetadataRegistry } from '../Registry/MetadataRegistry';
-import { isEmpty } from '../Lib/utils';
+import { MetadataRegistry } from "../Registry/MetadataRegistry";
+import { isEmpty } from "../Lib/utils";
 
 type Callback<T = any> = (data: T) => void | Promise<void>;
 
@@ -75,10 +75,10 @@ export class EventDispatching {
         detachFrom: any,
         eventNameOrNamesOrCallback?: string | string[] | Callback
     ): void {
-        if (typeof eventNameOrNamesOrCallback === 'function') {
+        if (typeof eventNameOrNamesOrCallback === "function") {
             this._filterHandlers(h => h.callback !== eventNameOrNamesOrCallback || h.attachedTo !== detachFrom);
 
-        } else if (typeof eventNameOrNamesOrCallback === 'string') {
+        } else if (typeof eventNameOrNamesOrCallback === "string") {
             this._filterEventHandlers(eventNameOrNamesOrCallback, h => h.attachedTo !== detachFrom);
 
         } else if (Array.isArray(eventNameOrNamesOrCallback)) {
@@ -92,10 +92,10 @@ export class EventDispatching {
     }
 
     public remove(eventNameOrNamesOrCallback: string | string[] | Callback): void {
-        if (typeof eventNameOrNamesOrCallback === 'function') {
+        if (typeof eventNameOrNamesOrCallback === "function") {
             this._filterHandlers(h => h.callback !== eventNameOrNamesOrCallback);
 
-        } else if (typeof eventNameOrNamesOrCallback === 'string') {
+        } else if (typeof eventNameOrNamesOrCallback === "string") {
             delete this._handlers[eventNameOrNamesOrCallback];
 
         } else if (Array.isArray(eventNameOrNamesOrCallback)) {
@@ -120,7 +120,7 @@ export class EventDispatching {
                         results.push(result);
                     }
                 } catch (e) {
-                    console.error(`Error in handler for event '${event}':`, e);
+                    console.error(`Error in handler for event "${event}":`, e);
                 }
 
                 if (handler.once) {
@@ -136,7 +136,7 @@ export class EventDispatching {
 
                     const fn = metaHandlers[className][method][String(event)];
 
-                    if (typeof fn === 'function') {
+                    if (typeof fn === "function") {
                         const result = fn(data);
 
                         if (!isEmpty(result)) {
@@ -168,7 +168,7 @@ export class EventDispatching {
                         results.push(result);
                     }
                 } catch (e) {
-                    console.error(`Error in async handler for event '${event}':`, e);
+                    console.error(`Error in async handler for event "${event}":`, e);
                 }
 
                 if (handler.once) {
@@ -183,7 +183,7 @@ export class EventDispatching {
                 for (const method in metaHandlers[className]) {
                     const fn = metaHandlers[className][method][String(event)];
 
-                    if (typeof fn === 'function') {
+                    if (typeof fn === "function") {
                         const result = await fn(data);
 
                         // If the result is not empty, push it to results

@@ -1,12 +1,12 @@
-import { ContainerModuleLoadOptions, ContainerModule, Container } from 'inversify';
+import { ContainerModuleLoadOptions, ContainerModule, Container } from "inversify";
 
-import { TYPES } from './Resources/Types';
+import { TYPES } from "./Resources/Types";
 
-import { MetadataRegistry } from './Registry/MetadataRegistry';
+import { MetadataRegistry } from "./Registry/MetadataRegistry";
 
-import { EventDispatching } from './Service/EventDispatching';
+import { EventDispatching } from "./Service/EventDispatching";
 
-import { setContainer } from './container';
+import { setContainer } from "./container";
 
 /**
  * The EventDispatchingModule

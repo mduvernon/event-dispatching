@@ -1,20 +1,20 @@
-import 'reflect-metadata';
+import "reflect-metadata";
 
-import { Container } from 'inversify';
+import { Container } from "inversify";
 
-import { EventDispatchingModule } from './EventDispatchingModule';
+import { EventDispatchingModule } from "./EventDispatchingModule";
 
-export * from './Decorator'
+export * from "./Decorator"
 
-export * from './Interface'
+export * from "./Interface"
 
-export * from './Lib'
+export * from "./Lib"
 
-export * from './Registry'
+export * from "./Registry"
 
-export * from './Resources'
+export * from "./Resources"
 
-export * from './Service'
+export * from "./Service"
 
 /**
  * @summary Import and call this function to add this module to your API.

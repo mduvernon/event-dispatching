@@ -1,4 +1,4 @@
-import { injectable, Container } from 'inversify';
+import { injectable, Container } from "inversify";
 
 import {
     ISubscriberMetadata,
@@ -9,7 +9,7 @@ import {
 import {
     DECORATOR_EVENT_SUBSCRIBER_META_KEY,
     DECORATOR_ON_META_KEY,
-} from '../Decorator';
+} from "../Decorator";
 
 // Utility types
 type EventMethod = (props: any) => any;
@@ -45,7 +45,7 @@ export class MetadataRegistry {
         const { container } = props;
 
         if (!container) {
-            throw new Error('Container is required');
+            throw new Error("Container is required");
         }
 
         this._container = container;

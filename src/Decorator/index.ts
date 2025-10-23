@@ -1,2 +1,2 @@
-export * from './EventSubscriber';
-export * from './On';
+export * from "./EventSubscriber";
+export * from "./On";

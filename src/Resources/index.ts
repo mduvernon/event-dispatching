@@ -1,2 +1,2 @@
 // Export all resources
-export * from './Types';
+export * from "./Types";

@@ -1,3 +1,3 @@
 // Export All Registries
 
-export * from './MetadataRegistry'
+export * from "./MetadataRegistry"
