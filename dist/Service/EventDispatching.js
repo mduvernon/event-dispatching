@@ -46,10 +46,10 @@ let EventDispatching = class EventDispatching {
         }
     }
     detach(detachFrom, eventNameOrNamesOrCallback) {
-        if (typeof eventNameOrNamesOrCallback === 'function') {
+        if (typeof eventNameOrNamesOrCallback === "function") {
             this._filterHandlers(h => h.callback !== eventNameOrNamesOrCallback || h.attachedTo !== detachFrom);
         }
-        else if (typeof eventNameOrNamesOrCallback === 'string') {
+        else if (typeof eventNameOrNamesOrCallback === "string") {
             this._filterEventHandlers(eventNameOrNamesOrCallback, h => h.attachedTo !== detachFrom);
         }
         else if (Array.isArray(eventNameOrNamesOrCallback)) {
@@ -62,10 +62,10 @@ let EventDispatching = class EventDispatching {
         }
     }
     remove(eventNameOrNamesOrCallback) {
-        if (typeof eventNameOrNamesOrCallback === 'function') {
+        if (typeof eventNameOrNamesOrCallback === "function") {
             this._filterHandlers(h => h.callback !== eventNameOrNamesOrCallback);
         }
-        else if (typeof eventNameOrNamesOrCallback === 'string') {
+        else if (typeof eventNameOrNamesOrCallback === "string") {
             delete this._handlers[eventNameOrNamesOrCallback];
         }
         else if (Array.isArray(eventNameOrNamesOrCallback)) {
@@ -87,7 +87,7 @@ let EventDispatching = class EventDispatching {
                     }
                 }
                 catch (e) {
-                    console.error(`Error in handler for event '${event}':`, e);
+                    console.error(`Error in handler for event "${event}":`, e);
                 }
                 if (handler.once) {
                     this._handlers[String(event)] = this._handlers[String(event)].filter(h => h !== handler);
@@ -97,7 +97,7 @@ let EventDispatching = class EventDispatching {
             for (const className in metaHandlers) {
                 for (const method in metaHandlers[className]) {
                     const fn = metaHandlers[className][method][String(event)];
-                    if (typeof fn === 'function') {
+                    if (typeof fn === "function") {
                         const result = fn(data);
                         if (!(0, utils_1.isEmpty)(result)) {
                             results.push(result);
@@ -122,7 +122,7 @@ let EventDispatching = class EventDispatching {
                         }
                     }
                     catch (e) {
-                        console.error(`Error in async handler for event '${event}':`, e);
+                        console.error(`Error in async handler for event "${event}":`, e);
                     }
                     if (handler.once) {
                         this._handlers[String(event)] = this._handlers[String(event)].filter(h => h !== handler);
@@ -132,7 +132,7 @@ let EventDispatching = class EventDispatching {
                 for (const className in metaHandlers) {
                     for (const method in metaHandlers[className]) {
                         const fn = metaHandlers[className][method][String(event)];
-                        if (typeof fn === 'function') {
+                        if (typeof fn === "function") {
                             const result = yield fn(data);
                             // If the result is not empty, push it to results
                             if (!(0, utils_1.isEmpty)(result)) {

@@ -1,4 +1,4 @@
-import { MetadataRegistry } from '../Registry/MetadataRegistry';
+import { MetadataRegistry } from "../Registry/MetadataRegistry";
 type Callback<T = any> = (data: T) => void | Promise<void>;
 type EventMap = {
     [eventName: string]: any;

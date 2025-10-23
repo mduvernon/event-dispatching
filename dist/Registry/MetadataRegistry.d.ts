@@ -1,4 +1,4 @@
-import { Container } from 'inversify';
+import { Container } from "inversify";
 import { ISubscriberMetadata, IEventMetadata } from "../Interface";
 type EventMethod = (props: any) => any;
 type EventsHandler = Record<string, Record<string, Record<string, EventMethod>>>;

@@ -28,7 +28,7 @@ let MetadataRegistry = class MetadataRegistry {
     init(props) {
         const { container } = props;
         if (!container) {
-            throw new Error('Container is required');
+            throw new Error("Container is required");
         }
         this._container = container;
         this._scanSubscriberDecorators();

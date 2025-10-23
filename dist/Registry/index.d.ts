@@ -1,1 +1,1 @@
-export * from './MetadataRegistry';
+export * from "./MetadataRegistry";
