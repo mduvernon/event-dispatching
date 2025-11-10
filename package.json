@@ -1,6 +1,6 @@
 {
     "name": "event-dispatching",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "description": "Dispatching and listening for application events in Typescript",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
